@@ -1,0 +1,10 @@
+= downloads tcga kidney data and runs multiple mediation analysis
+
+0-get_data.R requires TCGA Assembler to be located in the directory TCGA-Assembler/
+This can be downloaded from https://github.com/compgenome365/TCGA-Assembler-2
+
+0-get_data.R outputs a cleaned up data set 0-get_data.RData which is included in this repo. subsequent analyses only use this .RData file, so RUNNING 0-get_data.R CAN BE SKIPPED
+
+1-fit_model.R fits model and outputs table
+
+2-plot_chain_graph.R plots a chain graph based on parameter fits

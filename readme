@@ -1,0 +1,7 @@
+Code to reproduce results in 'Multiple Mediation Analysis with Chain Graphs'
+by Long et. al.
+
+1) Install mediateR package here: https://github.com/longjp/mediateR/
+2) sims/ generate simulation results and outputs figs / tables to ms/figs
+3) kidney_meta/ downloads TCGA data and runs mediation pipeline, outputs to ms/figs
+

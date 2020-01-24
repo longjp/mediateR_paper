@@ -1,0 +1,17 @@
+Folder contains 3 simulations
+
+
+== rare_probit
+Rscript rare_probit.R ## computation
+Rscript rare_probit_plot.R ## generate plots
+
+
+== sim_indep and sim_null
+- sim_indep.R and sim_null.R run on HPC cluster using *.lsf files
+- can also be run locally with Rscript
+
+Rscript sim_indep.R
+Rscript sim_indep_res.R
+
+- same usage for sim_null*
+- control number of processors in *params.R files
