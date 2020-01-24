@@ -1,4 +1,4 @@
-Code to reproduce results in 'Multiple Mediation Analysis with Chain Graphs'
+Code to reproduce results in 'Multiple Mediation Analysis with Nonlinear Chain Graphs'
 by Long et. al.
 
 1) Install mediateR package here: https://github.com/longjp/mediateR/
