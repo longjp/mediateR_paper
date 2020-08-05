@@ -1,5 +1,5 @@
-Code to reproduce results in 'Multiple Mediation Analysis with Nonlinear Chain Graphs'
-by Long et. al.
+Code to reproduce results in Long et al 2020+
+
 
 1) Install mediateR package here: https://github.com/longjp/mediateR/
 2) sims/ generate simulation results and outputs figs / tables to ms/figs
