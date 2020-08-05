@@ -173,7 +173,15 @@ out <- data.frame(rna=mrna_paths_names,
 addtorow <- list()
 addtorow$pos <- list(0)
 addtorow$command <- c("Pathway & \\multicolumn{2}{c}{Indirect} & \\multicolumn{2}{c}{Direct}  & \\multicolumn{2}{c}{Total} \\\\\n")
-caption <- "Indirect, Direct, and Total effects (in days) of metabolomic mRNA expression as mediated by protein expression.\\label{tab:tcga_results}"
-out <- xtable(out,caption=caption)
+caption <- "Indirect, Direct, and Total effects and 95\\% confidence intervals (in days) of metabolomic mRNA expression as mediated by protein expression.\\label{tab:tcga_results}"
+out <- xtable(out,caption=caption,align="clrlrlrl")
 print(out,add.to.row=addtorow,include.colnames=FALSE,
       include.rownames=FALSE,file="../ms/figs/tcga_results.tex")
+
+### get medians
+survfit(dat$y~1)
+fu_time <- as.numeric(dat$y)[1:length(dat$y)]
+survfit(Surv(fu_time,rep(1,length(fu_time)))~1)
+median(fu_time)
+
+
