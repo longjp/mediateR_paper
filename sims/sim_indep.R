@@ -14,7 +14,7 @@ RunSim <- function(ii,mm_direct,indirect_t){
   print(paste0(ii,"/",nrow(sim_set)))
   sim_params <- QuickSimMultipleMediator(n=sim_set[ii,1],nmm=sim_set[ii,2],var_mm=var_mm,
                                          xx_direct=xx_direct,mm_direct=mm_direct,
-                                         xx_prob=xx_prob,family)
+                                         xx_prob=xx_prob,family=family)
   dat <- SimulateData(sim_params)
   fit <- ComputePath(dat,mmn=mmn)
   indirect <- ComputeEffectxx(dat,fit,"indirect",mmn=mmn,rmean=rmean)
@@ -36,7 +36,7 @@ RunSim <- function(ii,mm_direct,indirect_t){
 ## SIMULATE WITH LARGE INDIRECT EFFECT
 sim_params <- QuickSimMultipleMediator(n=n_true,nmm=5,var_mm=var_mm,
                                        xx_direct=xx_direct,mm_direct=mm_direct_large,
-                                       xx_prob=xx_prob,family)
+                                       xx_prob=xx_prob,family=family)
 dat <- SimulateData(sim_params)
 rmean <- max(as.matrix(dat$y)[,1])
 fit <- ComputePath(dat,mmn=mmn)
@@ -56,7 +56,7 @@ dat_large <- dat
 ## SIMULATE WITH SMALL INDIRECT EFFECT
 sim_params <- QuickSimMultipleMediator(n=n_true,nmm=5,var_mm=var_mm,
                                        xx_direct=xx_direct,mm_direct=mm_direct_small,
-                                       xx_prob=xx_prob,family)
+                                       xx_prob=xx_prob,family=family)
 dat <- SimulateData(sim_params)
 rmean <- max(as.matrix(dat$y)[,1])
 fit <- ComputePath(dat,mmn=mmn)
